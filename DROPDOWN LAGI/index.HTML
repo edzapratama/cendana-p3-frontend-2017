@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LATIHAN DROPDOWN</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Sedgwick+Ave+Display|Yanone+Kaffeesatz:400,700" rel="stylesheet">
+</head>
+<body>
+
+<header>
+<center><h1>Latihan Js-Query Menu Dropdown</h1></center></header>
+
+<center><div class="example">
+    <ul id="nav">
+             <li><a class="sub-menu" href="#">Teknologi</a>
+                <ul class="dd">
+                <li><a href="#">Apple</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Hardware</a></li>
+            <li><a href="#">Industry News</a></li>
+            <li><a href="#">Linux/Unix</a></li>
+                <li><a href="#">Microsoft</a></li>
+                </ul>
+    
+             <li><a class="sub-menu" href="#">Produk</a>
+                <ul class="dd">
+                <li><a href="#" class="sub-1">Web Master</a></li>
+            <li><a href="#" class="sub-1">Graphic Design</a></li>
+            <li><a href="#" class="sub-1">Web Programming</a></li>
+            <li><a href="#" class="sub-1">Digital Marketing</a></li>
+                <li><a href="#" class="sub-1">Flash Animasi</a></li>
+                </ul>
+
+          <li><a class="sub-menu" href="#">Artikel</a>
+            <ul class="dd"> <!--dd ini yg kebawah-->
+                <li><a href="#">HTML / CSS</a></li>
+                <li><a class="sub-menu" href="#">JS / jQuery  --> </a>
+                    <ul>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">MySQL</a></li>
+                <li><a href="#">XSLT</a></li>
+                <li><a href="#">Ajax</a></li>
+            </ul>
+        </li>
+        <li><a class="sub-menu" href="#">Latihan - Latihan</a>
+            <ul class="dd">
+                <li><a class="sub-menu" href="#">By category --></a>
+                    <ul>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">MySQL </a></li>
+                        <li><a class="sub-menu" href="#">Menu1 --></a>
+                            <ul>
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a class="sub-menu" href="#">Menu3 --> </a>
+                                    <ul>
+                                        <li><a href="#">Menu31</a></li>
+                                        <li><a href="#">Menu32</a></li>
+                                        <li><a href="#">Menu33</a></li>
+                                        <li><a href="#">Menu34</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Menu4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+                <li><a class="sub-menu" href="#">By tag name</a>
+                    <ul>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">Kontak Person</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Kontak Person </a></li>
+    </ul>
+</div>
+</center>
+<script>
+$(document).ready(function(){
+           $("#menu li a").click(function() {
+                var hidden = $(this).parents("li").children("ul").is(":hidden");
+                
+                $("#menu>ul>li>ul").hide()        
+                $("#menu>ul>li>a").removeClass();
+                    
+                if (hidden) {
+                    $(this)
+                        .parents("li").children("ul").toggle()
+                        .parents("li").children("a").addClass("zoneCur");
+                    } 
+               });
+        });
+</script>
+
+</body>
+</html>
