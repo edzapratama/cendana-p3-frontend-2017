@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LATIHAN FORM VALIDASI</title>
+	<link 	rel="stylesheet" href="style.css">
+	<script src="file-javascript.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Bree+Serif|Chewy|Kaushan+Script|Lobster|Orbitron:400,700|Righteous" rel="stylesheet">
+</head>
+
+<body>
+	<div class="halaman-utama">
+		
+		<div class="judul">
+			Latihan Js-Query | Part : Validasi Data
+		</div>
+		<div class="kotak">
+			<form  action="#" name="form" onsubmit="valid()">
+				<fieldset>
+					<legend>FORM REGISTRASI VALIDASI JS-QUERY</legend>
+					<div class="form">
+						<span class="label">Nama : </span>
+						<input type="text" name="nama" placeholder="isikan nama anda">
+					</div>	
+
+					<div class="form">
+						<span class="label">Email : </span>
+						<input type="text" name="email" placeholder="isikan Email anda">
+					</div>	
+
+					<div class="form">
+						<span class="label">Password : </span>
+						<input type="text" name="password" placeholder="isikan Password anda">
+					</div>	
+
+					<div class="form">
+						<span class="label">Re-Password : </span>
+						<input type="text" name="repassword" placeholder=" Ulangi Password anda">
+					</div>	
+
+					<div class="form">
+						<span class="label">No-Handphone : </span>
+						<input type="text" name="nohandphone" placeholder="isikan No-handphone anda" id="no"/>
+					</div>	
+
+					<div class="form">
+						<input class="submit" type="submit" value="Kirimkan">
+					</div>
+					
+				</fieldset>
+			</form>
+		</div>
+		<div class="authors">Creator : by Edza</div>
+	</div>
+	
+ 	<script> 
+	 	function valid(){
+
+			var nama = document.forms["form"]["nama"].value;
+			if (nama == ''){
+				alert("Waduh mbah , jenenge sampean sinten ?");
+				  return false;
+		    } 
+
+			var email = document.forms["form"]["email"].value;
+		     var validasi = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		    if (!validasi.test(email)) {
+		        alert("Email di isi mbah , kudu bener");
+		       return false;
+		    } 
+
+		    var kunci_password = document.forms["form"]["password"].value;
+			     var validasi = /^([a-zA-Z0-9_\.\-\@\,\#\%]{6,20})+$/;
+			    if (!validasi.test(kunci_password)) {
+			        alert("password Salah mbah");
+			  return false;
+			    } 
+
+		   var confrim = document.forms["form"]["confrim"].value;
+		    var kunci_password = document.forms["form"]["password"].value;
+			    if (confrim != kunci_password) {
+			        // alert("password gak Sama mbah");
+			       return false;
+		    } else{
+		    	return true;
+		    }
+			
+
+	};
+			  // $('#password').keyup(function(){
+			  var kunci_password = document.forms["form"]["password"].value;
+			     var validasi = /^([a-zA-Z0-9_\.\-\@\,\#\%]{6,20})+$/;
+			    if (!validasi.test(kunci_password)) {
+			        alert("password Salah mbah");
+			  	$('#pesan_pass').innerhtml('Password salah');
+			  return false;
+			    } });
+
+			  //Fungsinya adalah mendeteksi ketika tombol keyboard ditekan .
+
+			  //innerHTML adalah semua yang ada dalam element HTML mulai dari tag pembuka sampai tag penutup
+			$('#nohandphone').keyup(function(){
+	   	 if(isNaN(String.fromCharCode(event.which))){
+	        var value = $(this).val();
+
+	        $(this).val(value.substr(0,value.length-1));
+			 }});
+			//IsNan ini sama kaya is number : fungsinya untuk menguji angka atau bukan , jika iya maka fungsinya akan mengembalikan ke nilai false dan sebaliknya
+
+			//substr adalah untuk memanipulasi string atatu fungsi PHP untuk memotong string, atau untuk mengambil sebagian nilai dari sebuah string. 
+
+			  //fromCharCode() method berguna untuk mengubah character Unicode menjadi character biasa.
+			  
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 18px/24px helvetica, arial, sans-serif;
+}
+
+.container {
+	width: 810px;
+	margin: 50px auto;
+}
+
+header {
+  margin: 40px 0;
+  color: #333;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 24px;
+}
+
+header:hover {
+ font-size: 24px;
+ color: #008b8b;
+ text-shadow: 4px 4px 8px #000;
+} 
+
+
+.wisata {
+	width: 250px;
+	padding: 15px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,.6);
+	border-radius: 5px;
+	float: left;
+	margin-right: 20px;
+}
+
+.wisata h2 {
+	text-align: center;
+	color: #ccc;
+	margin-bottom: 10px;
+}
+
+.wisata .info {
+	color: #fff;
+	font-size: .7em;
+}
+
+.wisata .deskripsi {
+	color: #eee;
+	font-size: .8em;
+	font-style: italic;
+}
+
+.wisata .info, .wisata .deskripsi {
+	line-height: 1em;
+	margin-bottom: 20px;
+} 
+
+.wisata button {
+	width: 220px;
+	height: 25px;
+	background-color: #BADA55;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: .8em;
+	letter-spacing: .3em;
+	cursor: pointer;
+}
+
+.wisata button:hover {
+	-webkit-filter: brightness(105%);
+}
+
+.wisata .harga {
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+

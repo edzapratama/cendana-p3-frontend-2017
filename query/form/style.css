@@ -1,0 +1,74 @@
+html {
+  background: url(tumblr_static_atdglrq39ios4kosk0g4gkokg_640_v2.jpg) no-repeat  fixed;
+  background-size:100% 100%;
+}
+
+.judul {
+	font-family: 'Chewy', cursive;
+	font-size: 2em;
+	font-style: italic;
+	color: #fff;
+	margin-left:630px;
+	margin-top:120px;
+}
+
+.kotak {
+	font-family: 'Bree Serif', serif;
+	font-size: 20px;
+	width: 500px;
+	height:250px;
+	padding: 15px;
+	margin-top: 10px;
+	margin-left: 600px;
+	border-radius: 30px;
+	background-color: #4b0082;
+	color: #fff;
+}
+
+
+.kotak .submit {
+	margin-left:280px;
+	margin-top:22px;
+	width: 200px;
+	color: #002;
+	background: #FFd700 ;
+	height: 25px;
+	position: absolute;
+}
+
+.kotak .label {
+	display:block;
+	float:left;
+	width:160px;
+	text-align:right;
+	margin-right:5px;
+}
+
+.kotak input {
+	background-color:#191970 ;
+	color: #fff;
+	width: 220px;
+	height: 25px;
+	float: left;
+	font-family: 'Bree Serif', serif;
+	font-size:16px;
+	padding-left: 10px; 
+}
+
+.kotak .form {
+	padding:5px 0;
+	clear:both;
+	width:400px;
+}
+
+.authors {
+	font-family: 'Chewy', cursive;
+	font-size: 1.4em;
+	font-style: italic;
+	color: #fff;
+	margin-left:1000px;
+	margin-top:20px;
+	color: #FFA500;
+}
+}
+
